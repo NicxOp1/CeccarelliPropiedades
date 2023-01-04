@@ -1,0 +1,59 @@
+:root {
+  --white: #fff;
+  --black: #000;
+  --blueC: #004AAD;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navBar{
+  display: flex;
+  width: 100%;
+  height: 16vh;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.navBarAnchor{
+  font-size: larger;
+  display: flex;
+  width: 50%;
+  height: 16vh;
+  justify-content:space-between;
+  align-items: center;
+  padding: 0rem 5rem;
+  border-bottom: 5px solid var(--black);
+}
+.navBarAnchor a{
+  text-decoration: none;
+  color: var(--black);
+}
+.navBarAnchor a:hover{
+  padding: 5.5vh 0vh;
+  border-width: 1rem;
+  border-bottom: solid 5px var(--blueC);
+  cursor: pointer;
+}
+.aRight{
+  
+  color: white;
+  background-color: black;
+  font-size: larger;
+  width: 22%;
+  display: flex;
+  justify-content:center ;
+  align-items: center;
+  border-bottom: 5px solid var(--blueC);
+}
+.aRight a{
+  text-decoration: none;
+  color: var(--white);
+}
+.aRight:hover{
+  cursor: pointer;
+}
+@media (max-width: 900px) {
+ 
+}

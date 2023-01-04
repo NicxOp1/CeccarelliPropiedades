@@ -1,38 +1,121 @@
-.App {
-  text-align: center;
+/* Home css */
+.homeContainer{
+    display: flex;
+    height: 84vh;
+    width: 100%;
+}
+.wordsHome{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 65vh;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.titleHome{
+    width: 40vw;
+
+    text-align: center;
+    font-size: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  
+}
+.subTitleHome{
+    font-weight: 300;
+    font-size: 1.5rem;
+    text-align: center;
+}
+span{
+    color: var(--blueC);
+}
+.wordsHome button{
+    cursor: pointer;
+    border-style:none ;
+    width: fit-content;
+    padding: .5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    background-color: var(--black);
+    color: var(--white);
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.photo1Home{
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    position: absolute;
+    right: 18.5rem;
+    height:80vh;
+    width: 28.5vw;
+    top: -5rem;
+}
+.photo2Home{
+    position: absolute;
+    right: 5rem;
+    height: 40vh;
+    width: 30vw;
+    top: 18rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* FOOTER HOME */
+.footerHome{
+    background-color: black;
+    border: black 1px solid ;
+    height: 16.3vh;
+    width: 100%;
+    bottom: 0rem;
+    left: 0rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+form{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0rem 2rem;
+    height: 3rem;
 }
-
-.App-link {
-  color: #61dafb;
+.footerHome input{
+    font-size: large;
+    padding-left: 1rem ;
+    width: 20%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footerHome input::placeholder{
+    color:black
+}
+.iconLocation{
+    margin-top: 5px;
+    margin-left: -8.5rem;
+}
+.footerHome select{
+    cursor: pointer;
+    border-style: solid;
+    font-size: large;
+    width: 20%;
+    padding-left: 1rem;
+}
+.selectType option{
+    padding-left: 1rem;
+}
+.footerHome button{
+    border-style:  none;
+    cursor: pointer;
+    width: 20%;
+    color: white;
+    background-color: var(--blueC);
+    border-radius: 0rem;
+    font-size: large;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 1rem;
+    
+}
+.footerHome h5{
+    padding: .4rem;
+    padding-left: 2rem;
+    color:white;
+    font-size: large;
+    font-weight: 300;
 }
