@@ -1,13 +1,13 @@
 /* import ComponentRoutes from "./ComponentRoutes"; */
 import Layout from "./layout/Layout";
 import './App.css';
-import Home from "./pages/Home";
+import { ComponentRoutes } from "./ComponentRoutes";
 
 function App() {
   return (
     <>
     <Layout>
-      <Home />
+      <ComponentRoutes />
     </Layout>
   </>
   );

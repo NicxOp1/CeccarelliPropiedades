@@ -2,6 +2,7 @@
   --white: #fff;
   --black: #000;
   --blueC: #004AAD;
+  --orangeC:#d74400;
 }
 
 *{
@@ -35,6 +36,11 @@
   border-width: 1rem;
   border-bottom: solid 5px var(--blueC);
   cursor: pointer;
+}
+.bRight{
+  width: 30%;
+  height: 16vh;
+  border-bottom: 5px solid var(--black);
 }
 .aRight{
   

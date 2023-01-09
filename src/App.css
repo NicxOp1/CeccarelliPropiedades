@@ -9,22 +9,25 @@
     flex-direction: column;
     width: 50%;
     height: 65vh;
-    align-items: center;
+    padding-left: 4rem;
+    align-items:flex-start;
     justify-content: space-evenly;
 }
 .titleHome{
     width: 40vw;
-
-    text-align: center;
-    font-size: 3rem;
-    padding-left: 1rem;
+    line-height: 3rem;
+    text-align: flex-start;
+    font-size: 3rem;/* 
+    padding-left: 1rem; */
     padding-right: 1rem;
   
 }
 .subTitleHome{
+    height: 9rem;
+    width: 18rem;
     font-weight: 300;
     font-size: 1.5rem;
-    text-align: center;
+    text-align: flex-start;
 }
 span{
     color: var(--blueC);
@@ -32,22 +35,27 @@ span{
 .wordsHome button{
     cursor: pointer;
     border-style:none ;
+    border: .18rem solid black;
     width: fit-content;
     padding: .5rem;
     font-size: 1.2rem;
     font-weight: 500;
     background-color: var(--black);
-    color: var(--white);
+    color: white;
+}
+.wordsHome button:hover{
+    color: white;
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+
 }
 
 .photo1Home{
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
     position: absolute;
-    right: 18.5rem;
+    right: 18rem;
     height:80vh;
     width: 28.5vw;
-    top: -5rem;
+    top:-5rem;
 }
 .photo2Home{
     position: absolute;
@@ -59,9 +67,9 @@ span{
 
 /* FOOTER HOME */
 .footerHome{
-    background-color: black;
-    border: black 1px solid ;
-    height: 16.3vh;
+    background-color: var(--orangeC);
+    border: var(--orangeC) 1px solid ;
+    height: 18vh;
     width: 100%;
     bottom: 0rem;
     left: 0rem;
@@ -69,7 +77,7 @@ span{
     display: flex;
     flex-direction: column;
 }
-form{
+.preFormHome{
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -80,42 +88,192 @@ form{
     font-size: large;
     padding-left: 1rem ;
     width: 20%;
+    border: 3px solid black;
 }
 .footerHome input::placeholder{
-    color:black
+    color:black;
+    font-weight: 500
 }
 .iconLocation{
-    margin-top: 5px;
+    margin-top: .7rem;
     margin-left: -8.5rem;
 }
 .footerHome select{
+    border: 3px solid black;
     cursor: pointer;
     border-style: solid;
     font-size: large;
     width: 20%;
+    font-weight: 500;
     padding-left: 1rem;
 }
 .selectType option{
     padding-left: 1rem;
-}
-.footerHome button{
-    border-style:  none;
-    cursor: pointer;
-    width: 20%;
-    color: white;
-    background-color: var(--blueC);
-    border-radius: 0rem;
-    font-size: large;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding-left: 1rem;
+    font-weight: 500
     
 }
+.footerHome button{
+    border-style:none;
+    cursor:pointer;
+    width:20%;
+    color:black;
+    background-color:var(--orangeC);
+    border:3px solid black;
+    border-radius:0rem;
+    font-size:large;
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    padding-left:1rem;
+}
 .footerHome h5{
-    padding: .4rem;
-    padding-left: 2rem;
+    padding:.4rem;
+    padding-left:2rem;
     color:white;
+    font-size:larger;
+    font-weight:500;
+}
+/* filter properties */
+.containerProperties{
+    display: flex;
+    height: auto;
+    width: 100%;
+}
+.filterProperties{
+    display: flex;
+    position: sticky;
+    top: 0px;
+    flex-direction: column;
+    justify-content:space-around;
+    
+    height: 84vh; 
+    width: 18%;
+    padding: 0rem 1.5rem;
+}
+.filterProperties input {
+    border: 2px solid black;
+    height: 2.5rem;
+    padding-left: 1rem;
     font-size: large;
-    font-weight: 300;
+    font-weight:500;
+    color: var(--orangeC);
+}
+.filterProperties input::placeholder {
+    color: var(--orangeC);
+    font-size: large;
+    font-weight:500;
+    
+}
+.filterProperties select {
+    border: 2px solid black;
+    height: 2.5rem;
+    padding-left: 1rem;
+    font-size: large;
+    color: var(--orangeC);
+    font-weight:500;
+}
+.filterProperties button {
+    border: none;
+    height: 2.5rem;
+    font-weight:400;
+    background-color: var(--orangeC);
+    font-size: large;
+}
+.btnDeleteFilter{
+    background-color: red!important;
+}
+.cardContainerProperties{
+    border-left: 5px var(--black) solid;
+    width: 82%;
+    display: flex ;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    height: fit-content;
+}
+.btnSeeMoreDetails{
+    position: absolute;
+    
+    border:1px var(--orangeC);
+    border-radius: 0rem 0rem 0rem 1rem;
+    right:55px;
+    font-size: larger;
+    padding: .5rem 2rem;
+    opacity: 80%;
+    transition: 1s;
+    z-index: 200;
+   /*  top: 0px; */
+}
+.btnSeeMoreDetails:hover{
+    background-color: var(--orangeC);
+    /* font-weight: 600; */
+/*     color: white; */
+}
+.cardProperties{
+    display: flex;
+/*     justify-content: center;
+    align-items: center; */
+    margin: 3rem;
+    height: 50%;
+    width: 90%;
+    border: beige 1px solid;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.swiperCard{
+    height: 100%;
+    width: 37%;
+    display: flex;
+}
+.imgDiv{
+    display: flex;
+    height:auto;
+    width: 100%;
+   /*  border: 1px solid red; */
+    object-fit: contain;
+    object-position:50% 50%;
+    justify-content: center;
+    align-items: center;
+}
+.imgDiv img{
+/*     display: flex;
+    justify-content: center;
+    align-items: center; */
+    padding: 1rem;
+    height:95%;
+    width: 100%;
+}
+.cardMinDetails{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-evenly;
+    height: auto;
+    width: 100%;
+    margin: 0rem 2rem
+   /*  border: 5px dotted lightseagreen; */
+}
+.titleCardDetail{
+    font-size: xx-large;
+    font-weight: bolder;
+    color: var(--blueC);
+}
+.microDetails{
+    border: 1px solid beige;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 50%;
+    width: 100%;
+}
+.microDetails p{
+   /*  border: 2px solid royalblue; */
+    padding: 1rem;
+    font-size: larger;
+    display: flex;
+    align-items: center;
+    height:fit-content ; 
+    font-weight: bolder;
 }

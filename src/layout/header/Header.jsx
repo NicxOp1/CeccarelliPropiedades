@@ -11,6 +11,9 @@ export default function Header() {
         <a href="#">Propiedades</a>
         <a href="#">Nosotros</a>
         </div>
+        <div className="bRight">
+          
+        </div>
         <div className="aRight">    
         <a href="#">Tasacion</a>
         </div>

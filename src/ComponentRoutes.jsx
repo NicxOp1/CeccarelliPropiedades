@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 /* import SignInUp from "./pages/SignInUp";
 import AddGame from "./pages/AddGame"; */
 import Home from "./pages/Home";
+import Properties from "./pages/Properties";
 /* import Cart from "./pages/Cart/Cart";
 import Profile from "./Components/Profile/Profile";
 import Store from "./pages/Store/Store";
@@ -13,7 +14,7 @@ import GameDitails from "./pages/Ditails/GameDitails";
 import { useSelector } from "react-redux";
 import ProtectedRoute from "./Components/ProtectedRoute";
  */
-export default function ComponentRoutes() {
+export const ComponentRoutes=()=> {
 /*   let user = useSelector((store) => store.userReducer);
   let admin = user.role === "admin";
   let logged = user.logged; */
@@ -21,7 +22,8 @@ export default function ComponentRoutes() {
   return (
     <Routes>
       {/*  NoLogin-Login  */}
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Home/>} />
+      <Route path='/Propiedades' element={<Properties/>} />
 {/*       <Route path="/*" element={<NotFoundPage />} />
       <Route path="/SignInUp" element={<SignInUp />} />
       <Route path="/Ditails/:id" element={<GameDitails />} />
