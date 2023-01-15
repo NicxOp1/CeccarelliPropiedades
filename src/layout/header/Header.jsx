@@ -1,4 +1,5 @@
 import React from "react";
+import { Link as LinkRouter } from 'react-router-dom'
 import "./header.css";
 
 
@@ -10,6 +11,7 @@ export default function Header() {
         <a href="#">Inicio</a>
         <a href="#">Propiedades</a>
         <a href="#">Nosotros</a>
+        <LinkRouter to='/contacto'>Contacto</LinkRouter>
         </div>
         <div className="bRight">
           

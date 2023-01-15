@@ -1,0 +1,89 @@
+.contact-back{
+    width: 100%;
+    height: 80vh;
+    background-image: url('/public/contact-back.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 40%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.formulario{
+    background-color: white;
+    width:450px;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: flex-start;
+    padding: .5rem 1rem 1.5rem 1rem;
+    gap: .5rem;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    backdrop-filter: blur(5px);
+
+    }
+.formulario input, .formulario textarea, .formulario button {
+    width: 95%;
+    height: 2rem;
+    background-color: #F1F1F1;
+    border-style: none;
+    border-radius: 3px;
+}
+.formulario textarea{
+    height: 4rem;
+    resize: none;
+}
+.formulario button {
+    background-color: #D2C3A3;
+    color: white;
+    
+}
+.formulario h2 {
+    font-weight: 900;
+    font-size: 2.5rem;
+}
+@media (min-width: 2550px){
+    .contact-back{
+        justify-content: center;
+        
+    }
+    .formulario{
+        width: 80%;
+        height: 90%;
+        border-radius: 4px;
+        gap: .8rem;
+        font-size: 2rem;
+        align-items:stretch;
+    }
+    .formulario input, .formulario textarea, .formulario button {
+        width: 95%;
+        height: 3rem;
+        font-size: 2rem;
+    }
+    .formulario textarea{
+        height: 12rem;
+    }
+}
+@media (max-width:768px){
+    .contact-back{
+        justify-content: center;
+        
+    }
+    .formulario{
+        background-color: rgba(255, 255, 255, 0.804);
+        gap: .2rem
+    }
+    .formulario input, .formulario textarea {
+        
+        background-color: #d8d5d59e;
+       
+    }
+    .formulario textarea{
+        height: max-content;
+    }
+    .formulario button{
+        margin-top: .5rem;
+    }
+}

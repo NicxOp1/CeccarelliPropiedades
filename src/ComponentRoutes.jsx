@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+import Contact from "./pages/Contact";
 /* import SignInUp from "./pages/SignInUp";
 import AddGame from "./pages/AddGame"; */
 import Home from "./pages/Home";
@@ -24,6 +25,8 @@ export const ComponentRoutes=()=> {
       {/*  NoLogin-Login  */}
       <Route path="/" element={<Home/>} />
       <Route path='/Propiedades' element={<Properties/>} />
+      <Route path='/contacto' element={<Contact/>}/>
+      
 {/*       <Route path="/*" element={<NotFoundPage />} />
       <Route path="/SignInUp" element={<SignInUp />} />
       <Route path="/Ditails/:id" element={<GameDitails />} />
