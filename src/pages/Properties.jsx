@@ -13,15 +13,15 @@ import "swiper/less/navigation";
 import "swiper/less/pagination";
 
 export default function Properties() {
-  let bedroomArray = [1, 2, 3, 4, 5];
   let locationRef = useRef(null);
   let priceRef = useRef(null);
   let typeRef = useRef(null);
   let roomRef = useRef(null);
   let [allProperties, allPropertiesSet] = useState([]);
   const dispatch = useDispatch();
-  const { getProperty } = propertyActions;
+  const {getProperty,getPropertyFilter} = propertyActions;
   let property = useSelector((state) => state.propertyReducer.property);
+  
   
   
   useEffect(() => {
@@ -31,10 +31,16 @@ export default function Properties() {
       .catch((err) => console.log(err.message));
   }, []);
   console.log(property)
+  
+  let bedrooms =allProperties.map((e) => e.bedrooms).sort();
+  bedrooms =Array.from(new Set(bedrooms))
+  console.log(bedrooms)
+
+
   let properties = allProperties;
   allProperties = allProperties.map((e) => e.typeProperty).sort();
   allProperties = Array.from(new Set(allProperties));
-
+console.log(properties)
   let valores = {};
   
   const selectEvent = (e) => {
@@ -50,12 +56,15 @@ export default function Properties() {
 
   const deleteEvent = (e) => {
    e.preventDefault();
-   dispatch(getProperty(valores));
    locationRef.current.value=""
    typeRef.current.value=""
    roomRef.current.value=""
    priceRef.current.value=""
+  dispatch(getPropertyFilter());
+  console.log(property)
+
    console.log("click")
+   
   };
   let breakpoints = {
     300: {
@@ -125,7 +134,7 @@ export default function Properties() {
           ref={roomRef}
         >
           <option value="">Ambientes</option>
-          {bedroomArray.map((e, i) => (
+          {bedrooms.map((e, i) => (
             <option key={i} value={e}>
               {e} Ambientes
             </option>
@@ -160,7 +169,7 @@ export default function Properties() {
         <button type="submit" onClick={selectEvent}>
           Buscar
         </button>
-        {property.length!=properties.length? (
+        {property.length>0?(
           <button
             className="btnDeleteFilter"
             type="submit"
@@ -169,7 +178,7 @@ export default function Properties() {
             Borrar Filtros
           </button>
         ) : (
-          <></>
+          null
         )}
       </form>
 
@@ -225,12 +234,19 @@ export default function Properties() {
                       <box-icon type="solid" name="map"></box-icon>
                       {e.location}
                     </p>
+                    <p>
+                    <box-icon name='money'></box-icon>
+                        {e.value}
+                    </p>
                   </div>
                 </div>
               </div>
             ))
           : properties.map((e) => (
               <div className="cardProperties">
+                <button className="btnSeeMoreDetails" type="submit" onClick={selectEvent}>
+          Detalles
+        </button>
                 <div className="swiperCard">
                   <Swiper
                     /* style={{padding:"0rem .5rem"}} */
@@ -275,6 +291,10 @@ export default function Properties() {
                     <p>
                       <box-icon type="solid" name="map"></box-icon>
                       {e.location}
+                    </p>
+                    <p>
+                    <box-icon type='solid' name='money'></box-icon>
+                        {e.value}
                     </p>
                   </div>
                 </div>

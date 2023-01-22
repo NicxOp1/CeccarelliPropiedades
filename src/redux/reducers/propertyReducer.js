@@ -1,7 +1,7 @@
 import {createReducer} from '@reduxjs/toolkit'
 import propertyActions from '../actions/propertyActions'
 
-const {getProperty/* ,getPropertyFilter,editCity,deleteCity,getMyCities */}= propertyActions
+const {getProperty,getPropertyFilter/* ,editCity,deleteCity,getMyCities */}= propertyActions
 const initialState = {
     property:[],
     valueHome:{}
@@ -20,13 +20,14 @@ const propertyReducer = createReducer(initialState, (builder)=>{
             //y el payload 
         }
     })
-/*     .addCase(getPropertyFilter.fulfilled, (state, action) => {
+     .addCase(getPropertyFilter.fulfilled, (state, action) => {
 
         return {
           ...state,
-          ...action.payload,
+          property:[],
+          valueHome:{}
         }
-    })
+    }) /*
     .addCase(deleteCity.fulfilled, (state,action) =>{
 
         let cities = state.city.filter( e => e._id !== action.payload.eliminate.id)

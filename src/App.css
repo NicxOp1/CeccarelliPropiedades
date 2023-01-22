@@ -193,21 +193,20 @@ span{
 }
 .btnSeeMoreDetails{
     position: absolute;
-    
     border:1px var(--orangeC);
     border-radius: 0rem 0rem 0rem 1rem;
     right:55px;
     font-size: larger;
     padding: .5rem 2rem;
     opacity: 80%;
-    transition: 1s;
+    transition: .5s;
     z-index: 200;
    /*  top: 0px; */
 }
 .btnSeeMoreDetails:hover{
     background-color: var(--orangeC);
-    /* font-weight: 600; */
-/*     color: white; */
+    /*  font-weight: 600; */ 
+     color: white; 
 }
 .cardProperties{
     display: flex;
@@ -274,6 +273,6 @@ span{
     font-size: larger;
     display: flex;
     align-items: center;
-    height:fit-content ; 
+    height:fit-content ;
     font-weight: bolder;
 }

@@ -15,8 +15,20 @@ const getProperty = createAsyncThunk('getProperty',async(valores)=>{
         }
     }
 })
+const getPropertyFilter = createAsyncThunk('getPropertyFilter',async()=>{
+    try{
+        return {
+            response:null
+        }
+    }catch(error){
+        return{
+            payload:"Error"
+        }
+    }
+})
 const propertyActions={
     getProperty
+    ,getPropertyFilter
 };
 
 export default propertyActions

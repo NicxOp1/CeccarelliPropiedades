@@ -32,7 +32,7 @@
   color: var(--black);
 }
 .navBarAnchor a:hover{
-  padding: 5.5vh 0vh;
+  padding: 5.4vh 0vh;
   border-width: 1rem;
   border-bottom: solid 5px var(--blueC);
   cursor: pointer;
